@@ -33,3 +33,7 @@ def page_not_found():
     bad_response = requests.get()
     if request.method == 'GET' and bad_response.status_code != 200:
         return render_template('bad_request.html')
+
+
+if __name__ == '__main__':
+    app.run()
